@@ -1,0 +1,117 @@
+
+body {
+    background-color: #eeeeee;
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1{
+    font-size: 55px;
+    font-weight: 800;
+    color: rgb(45, 45, 45);
+    padding-bottom: 20px;
+}
+
+h2{
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 30px;
+    color: rgb(45, 45, 45);
+}
+
+nav {
+    width: max-content;
+    margin: 0 435.5px 0 435.5px;   
+}
+
+.nav-link {
+    color: black !important;
+    text-decoration: none;
+    font-size: 20px !important;
+    width: 250px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.nav-link:hover {
+    color: lightsteelblue !important;
+}
+
+#contacto input, #contacto textarea {
+    background-color: #eeeeee;
+    border: none;
+    border-bottom: 1px solid black;
+    border-radius: 0%;
+}
+
+.btn {
+    width: 130px;
+    height: 35px;
+    color: white;
+    background-color: black;
+    border-radius: 0px;
+    padding: 6px 12px 6px 12px;
+}
+
+.btn:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+footer{
+    background-color: white;
+}
+footer a{
+    color:black;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+footer i{
+    font-size: 35px;
+    border: 1px solid;
+    height: 55px;
+    width: 55px;
+    text-align: center;
+    padding: 8px 0 0 0;
+    border-radius: 80px;
+    margin: 0 15px;
+}
+
+#proyectos h2 {
+    font-size: 22px;
+    line-height: 40px;
+    font-weight: 500;
+}
+#inicio h2 {
+    font-size: 22px;
+    line-height: 40px;
+    font-weight: 500;
+}
+p {
+    color: grey;
+    font-size: 17px;
+    line-height: 28px;
+}
+
+#inicio .btn {
+    text-align: center;
+    width: 200px;
+    height: 37px;
+    color: white;
+    background-color: black;
+    border-radius: 0px;
+    padding: 6px;
+}
+
+#inicio .btn:hover {
+    color: black;
+    background-color: white;
+    border: 1px solid black;
+}
+
+#home {
+    background-image: url(../images/fondo-home.png);
+    background-repeat: repeat;
+    background-size: 30%;
+    height: 81vh;
+}
