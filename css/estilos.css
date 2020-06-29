@@ -25,6 +25,7 @@ nav {
 
 .nav-link {
     color: black !important;
+    font-weight: 500;
     text-decoration: none;
     font-size: 20px !important;
     width: 250px;
@@ -77,10 +78,16 @@ footer i{
     margin: 0 15px;
 }
 
-#proyectos h2 {
+#portfolio h2 {
     font-size: 22px;
     line-height: 40px;
     font-weight: 500;
+}
+
+#portfolio h1 {
+    font-size: 60px;
+    line-height: 40px;
+    font-weight: 650;
 }
 #inicio h2 {
     font-size: 22px;
@@ -114,4 +121,18 @@ p {
     background-repeat: repeat;
     background-size: 30%;
     height: 81vh;
+}
+
+#inicio h1{
+    font-size: 70px;
+    font-weight: 800;
+    color: black;
+    padding-bottom: 20px;
+}
+
+#contacto h2 {
+    line-height: 40px;
+    font-weight: 700;
+    font-size: 35px;
+    color: rgb(45, 45, 45);
 }
