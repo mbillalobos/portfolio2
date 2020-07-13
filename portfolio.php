@@ -1,3 +1,4 @@
+<?php $pg = "portfolio"; ?>
 <!DOCTYPE html>
 <html lang="es">
 
@@ -19,28 +20,8 @@
 
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm">
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navMenu"
-                aria-controls="navMenu" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navMenu">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="sobre-mi.html">Sobre mí</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="portfolio.html">Portfolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contacto.html">Contacto</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+    <?php include_once("menu.php"); ?>
+
     </header>
     <section id="portfolio">
         <div class="container">
@@ -135,26 +116,7 @@
     <br>
     <br>
     <br>
-    <footer>
-        <div class="container">
-            <div class="row py-5">
-                <div class="col-sm-4 col-12 text-sm-left text-center">
-                    <a href="#">&#169;Todos los derechos reservados<br>2020</a>
-                </div>
-                <div class="col-sm-4 col-12 text-center py-4 py-sm-0">
-                    <a href="https://api.whatsapp.com/send?phone=542612054837" target="_blank">
-                        <i class="fab fa-whatsapp"></i></a>
-                    <a href="https://www.instagram.com/ignacio_billalobos/" target="_blank">
-                        <i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/NachitoBillalobos/" target="_blank">
-                        <i class="fab fa-facebook-square"></i></a>
-                </div>
-                <div class="col-sm-4 col-12 text-sm-right text-center">
-                    Patrocinado por<br><a href="https://depcsuite.com" target="_blank">DePC Suite</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+<?php include_once ("footer.php"); ?>
 </body>
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
