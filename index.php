@@ -26,9 +26,9 @@
             <section id="inicio">
                 <div class="row py-5">
                     <div class="col-10">
-                        <h1>Hola! <br> Soy Ignacio Billalobos</h1>
-                        <h2>DESARROLLADOR FULL STACK.</h2>
-                        <a href="portfolio.php" class="btn mt-sm-4">MIRÁ MI TRABAJO!</a>
+                        <h1>Hola! <br> Bienvenido a mi web</h1>
+                        <h2>Manuel Ignacio Billalobos</h2>
+                        <a href="portfolio.php" class="btn mt-sm-4">Conocé mis proyectos</a>
                     </div>
                 </div>
             </section>

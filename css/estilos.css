@@ -17,7 +17,14 @@ h2{
     font-size: 30px;
     color: rgb(45, 45, 45);
 }
+ 
+#sobre-mi h2{
+    line-height: 40px;
+    font-weight: 100;
+    font-size: 25px;
+    color: rgb(45, 45, 45);
 
+}
 nav {
     width: max-content;
     margin: 0 435.5px 0 435.5px;   
@@ -135,4 +142,42 @@ p {
     font-weight: 700;
     font-size: 35px;
     color: rgb(45, 45, 45);
+}
+.img-circle {
+    margin: 1em auto;
+    display: block;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: inset 5px 5px 10px 0px rgba(209,209,209,0.63);
+    border-radius: 50%;
+}
+#experiencia{
+    background-color: rgb(45, 45, 45); 
+}
+#experiencia h2{
+    color:white;
+    font-size: 45px;
+}
+#experiencia h3{
+    color: white;
+    font-size: 20px;
+}
+#experiencia h4{
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+}
+#sobre-mi i{
+    background-color: black;
+    color: white;
+    padding: 30px;
+    font-size: 40px;
+}
+#sobre-mi .bg-white{
+    min-height: 298px;
+}
+#sobre-mi h3{
+    letter-spacing: 2px;
+    font-size: 22px;
+    font-weight: 600;
 }

@@ -8,7 +8,68 @@ $pg = "contacto";
 
 include_once "PHPMailer/src/SMTP.php";
 include_once "PHPMailer/src/PHPMailer.php";
+$msg = "";
 
+function guardarCorreo($correo)
+{
+    $archivo = fopen("mails.txt", "a+");
+    fwrite($archivo, $correo . ";\n\r");
+    fclose($archivo);
+}
+
+if ($_POST) { /* es postback */
+
+    $nombre = $_POST["txtNombre"];
+    $correo = $_POST["txtCorreo"];
+    $asunto = $_POST["txtAsunto"];
+    $mensaje = $_POST["txtMensaje"];
+
+    if ($nombre != "" && $correo != "") {
+        guardarCorreo($correo);
+
+        $mail = new PHPMailer();
+        $mail->IsSMTP();
+        $mail->SMTPAuth = true;
+        $mail->Host = "mail.ignaciobillalobos.com.ar"; // SMTP a utilizar. Por ej. mail.dominio.com.ar
+        $mail->Username = "info@ignaciobillalobos.com.ar"; // Correo completo a utilizar
+        $mail->Password = "aqui va la clave de tu correo";
+        $mail->Port = 25;
+        $mail->From = "info@ignaciobillalobos.com.ar"; // Desde donde enviamos (Para mostrar)
+        $mail->FromName = "Manuel Ignacio Billalobos";
+        $mail->IsHTML(true);
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true,
+            ),
+        );
+
+        //Destinatario
+        $mail->addAddress($correo);
+        //$mail->addBCC("nelson.tarche@gmail.com");
+        $mail->Subject = "Contacto página web";
+        $mail->Body = "Recibimos tu consulta, <br>te responderemos a la brevedad.";
+        //  if(!$mail->Send()){
+        //     $msg = "Error al enviar el correo, intente nuevamente mas tarde.";
+        //   }
+        $mail->ClearAllRecipients(); //Borra los destinatarios
+
+        //Nosotros
+        $mail->addAddress("nelson.tarche@gmail.com");
+        $mail->Subject = "Recibiste un mensaje desde tu página web";
+        $mail->Body = "Te escribió $nombre cuyo correo es $correo, con el asunto $asunto y el siguiente mensaje:<br><br>$mensaje";
+
+        if ($mail->Send()) {
+            header('Location: confirmacion-envio.php');
+        } else {
+            $msg = "Error al enviar el correo, intente nuevamente mas tarde.";
+        }
+    } else {
+        $msg = "Complete todos los campos";
+    }
+
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -31,9 +92,9 @@ include_once "PHPMailer/src/PHPMailer.php";
 
 <body>
 <header>
-
+    
 <?php include_once("menu.php"); ?>
-        </header>
+</header>
     <section id="contacto">
         <div class="container">
             <div class="row">

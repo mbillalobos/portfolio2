@@ -27,7 +27,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-12 pt-5 pb-1">
-                    <h1>Mi Portfolio</h1>
+                    <h1>Mis Proyectos</h1>
                 </div>
             </div>
             <div class="row">
